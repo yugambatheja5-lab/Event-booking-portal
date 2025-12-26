@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+<h2>Booking Form</h2>
+<h3 id="eventName"></h3>
+<form onsubmit="confirmBooking(); return false;">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="number" placeholder="Tickets" required>
+    <button type="submit">Confirm Booking</button>
+</form>
+<script>
+document.getElementById("eventName").innerText =
+    "Event: " + localStorage.getItem("eventName");
+</script>
+</body>
+</html>
